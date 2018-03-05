@@ -11,6 +11,8 @@ public interface UsuarioService extends UsuarioRepository {
 
     List<Usuario> listOfId(String id);
 
+    Usuario cadastrar(Usuario usuario);
 
+    void deletar(String id);
 
 }

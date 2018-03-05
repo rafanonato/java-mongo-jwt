@@ -10,18 +10,27 @@ import java.util.List;
 
 public abstract class UsuarioImp implements UsuarioService {
 
-
     @Autowired
     UsuarioRepository usuarioRepository;
 
 
     @Override
     public List<Usuario> listAll() {
-        return null;
+        return (List<Usuario>) this.usuarioRepository.findAll();
     }
 
     @Override
     public List<Usuario> listOfId(String id) {
-        return null;
+        return (List<Usuario>) this.usuarioRepository.findOne(id);
+    }
+
+    @Override
+    public Usuario cadastrar(Usuario usuario) {
+        return this.usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public void deletar(String id) {
+        this.usuarioRepository.delete(id);
     }
 }

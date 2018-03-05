@@ -4,7 +4,7 @@ package br.com.crudmongo.nosql.Document;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "usuarios")
+@Document
 public class Usuario {
 
     private String id;
